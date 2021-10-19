@@ -61,6 +61,6 @@ $("#download-csv-button").click(function(){
 
     $("#analysis-results").table2csv('download', {
         filename:`duo-analysis-result_${date}_${time}.csv`,
-        excludeColumns:'th',
+        excludeColumns:'.excluded-from-export',
     });
 });
