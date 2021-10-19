@@ -40,6 +40,8 @@ fileInput.onchange = () => {
             $("#analysis-results tbody").html(final_table_html);
 
             $('#download-csv-button').prop('disabled', false);
+
+            $('#logon-count').html(`<p class="notification is-link is-light is-size-3" style="width: 12em; margin: 0 auto;"> ${data.length} counted logons </p>`)
         });
     }
 }
