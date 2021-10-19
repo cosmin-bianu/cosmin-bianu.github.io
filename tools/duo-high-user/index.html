@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>DUO High User Count</title>
+        <meta name="description" content="DUO Auth count tool">
+        <meta name="author" content="Cosmin Bianu">
+
+        <meta property="og:title" content="DUO High User Count">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="DUO Auth count tool">
+
+
+        <link rel="stylesheet" type="text/css" href="tools/duo-high-user/bulma/css/bulma.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="/favicon.ico">
+        <script src="tools/duo-high-user/js/jquery-3.6.0.min.js"></script>
+        <script src="tools/duo-high-user/js/jquery.csv.js"></script>
+        <script src="tools/duo-high-user/js/table2csv.js"></script>
+    </head>
+
+    <body>
+        
+        <div id='logo' class='m-5'>
+            <h1 class='title'> DUO High User Counter </h1>
+            <h2 class='subtitle'> Here you go </h2>
+        </div>
+
+        <section class="hero is-primary"> 
+            <div class="hero-body">
+
+                <div class="columns is-centered is-justify-content-center is-align-content-center">
+                    
+                    <div class="column has-text-centered">
+                        <div id="file-input" class="file is-info is-justify-content-center is-align-content-center is-boxed has-name is-large">
+                            <label class="file-label">
+                            <input class="file-input" type="file" name="resume">
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                                </span>
+
+                                <span class="file-label">
+                                    Select Authentication CSV
+                                </span>
+
+                                <span class="file-name">
+                                    Do it
+                                </span>
+                            </span>
+                            </label>
+                        </div>
+                        
+                        <div class="m-5"></div>
+
+                        <button id="download-csv-button" class="button is-warning is-medium is-justify-content-center is-align-content-center" disabled>
+                            <span class="icon">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <span>Download Analysis CSV</span>
+                        </button>
+                    </div>
+
+                    <div class="column"  hidden='true'>
+                        <table id="analysis-results" class="table is-striped">
+                            <thead>
+                                <th class='excluded-from-export'> No </th>
+                                <th> Email </th>
+                                <th> Logons </th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        
+                                    </th>
+                                    <td>
+                                        No data yet
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <th> No </th>
+                                <th> Email </th>
+                                <th> Logons </th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="tools/duo-high-user/js/file-input.js"></script>
+    </body>
+</html>
