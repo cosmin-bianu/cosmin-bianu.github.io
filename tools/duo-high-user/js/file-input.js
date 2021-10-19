@@ -33,15 +33,18 @@ fileInput.onchange = () => {
 
             count = 1;            
 
+            total_count = 0;
+
             items.forEach(item_arr => {
                 final_table_html += `<tr> <th class='excluded-from-export'> ${count++} </th>  <td> <a href="mailto:${item_arr[0]}">  ${item_arr[0]} </a> </td> <td> ${item_arr[1]} </td> </tr>\n`
+                total_count += item_arr[1];
             });
 
             $("#analysis-results tbody").html(final_table_html);
 
             $('#download-csv-button').prop('disabled', false);
 
-            $('#logon-count').html(`<p class="notification is-link is-light is-size-3" style="width: 12em; margin: 0 auto;"> ${data.length} counted logons </p>`)
+            $('#logon-count').html(`<p class="notification is-link is-light is-size-3" style="width: 12em; margin: 0 auto;"> ${total_count} counted logons </p>`)
         });
     }
 }
